@@ -45,8 +45,6 @@ def show_result_dialog(ans1, ans2):
 
 
 # ✏️ [พื้นที่สำหรับนักเรียน]: เพิ่มตรวจข้อ 3, 4 ตรงนี้
-# 📌 ฟังก์ชัน MessageBox (Dialog)
-# ----------------------------------------------------
 
 # 1. กำหนดค่าเริ่มต้นใน session_state ถ้ายังไม่มี
 if "ans3_val" not in st.session_state:
@@ -54,13 +52,6 @@ if "ans3_val" not in st.session_state:
 if "ans4_val" not in st.session_state:
     st.session_state.ans4_val = ""
 
-
-# 📌 ฟังก์ชันเคลียร์ค่าเมื่อกดปุ่มเริ่มใหม่
-def reset_game():
-    st.session_state.ans3_val = ""  # เคลียร์ค่าช่องข้อ 3
-    st.session_state.ans4_val = ""  # เคลียร์ค่าช่องข้อ 4
-    st.session_state.start = time.time()  # เริ่มเวลาใหม่
-    st.session_state.is_ended = False  # ปิด Dialog
 @st.dialog("📊 สรุปผลการเล่นเกม")
 def show_result_dialog(ans3, ans4):
     st.balloons()
