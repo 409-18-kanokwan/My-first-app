@@ -22,7 +22,7 @@ def reset_game():
 # 📌 ฟังก์ชัน MessageBox (Dialog)
 # ----------------------------------------------------
 @st.dialog("📊 สรุปผลการเล่นเกม")
-def show_result_dialog(ans1, ans2):
+def show_result_dialog(ans1, ans2, ans3, ans4):
     st.balloons()
     score = 0
 
@@ -52,8 +52,6 @@ if "ans3_val" not in st.session_state:
 if "ans4_val" not in st.session_state:
     st.session_state.ans4_val = ""
 
-@st.dialog("📊 สรุปผลการเล่นเกม")
-def show_result_dialog(ans3, ans4):
     st.balloons()
     score = 0
 
